@@ -15,6 +15,34 @@
   
   --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-luxury: cubic-bezier(0.7, 0, 0.84, 0);
+
+  /* Responsive spacing */
+  --section-padding: 10vw;
+  --section-padding-vertical: 120px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 6vw;
+    --section-padding-vertical: 80px;
+  }
+}
+
+.desktop-only {
+  display: flex !important;
+}
+
+.mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: flex !important;
+  }
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }

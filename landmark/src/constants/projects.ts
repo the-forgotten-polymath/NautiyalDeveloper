@@ -1,3 +1,6 @@
+import geotechnicalImg from '../assets/geotechnicalComplex.png';
+import structuralImg from '../assets/structuralDesign.png';
+
 export const PROJECTS = [
   {
     id: 'project-01',
@@ -37,7 +40,7 @@ export const PROJECTS = [
     city: 'Dehradun',
     area: 34000,
     bedrooms: null,
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1200'
+    image: geotechnicalImg
   },
   {
     id: 'project-06',
@@ -45,6 +48,6 @@ export const PROJECTS = [
     city: 'Regional',
     area: 6000,
     bedrooms: null,
-    image: 'https://images.unsplash.com/photo-1503387762-592dea58ef21?auto=format&fit=crop&q=80&w=1200'
+    image: structuralImg
   }
 ];

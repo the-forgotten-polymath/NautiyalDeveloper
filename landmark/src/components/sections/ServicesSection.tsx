@@ -26,7 +26,7 @@ export function ServicesSection() {
   ];
 
   return (
-    <div id="services" style={{ position: 'relative', background: 'var(--color-void)', zIndex: 10, padding: '120px 10vw', pointerEvents: 'auto' }}>
+    <div id="services" style={{ position: 'relative', background: 'var(--color-void)', zIndex: 10, padding: 'var(--section-padding-vertical) var(--section-padding)', pointerEvents: 'auto' }}>
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{
         visible: { transition: { staggerChildren: 0.1 } }
       }}>
@@ -34,13 +34,13 @@ export function ServicesSection() {
           OUR EXPERTISE
         </motion.div>
         
-        <motion.h2 variants={fadeUpVariant} style={{ fontFamily: 'var(--font-display)', fontSize: '48px', fontWeight: 300, color: 'var(--color-platinum)', marginBottom: '80px', textAlign: 'center' }}>
+        <motion.h2 variants={fadeUpVariant} style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: 300, color: 'var(--color-platinum)', marginBottom: 'clamp(40px, 8vw, 80px)', textAlign: 'center' }}>
           Bespoke Solutions for<br />Modern Landmarks
         </motion.h2>
         
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', 
           gap: '32px' 
         }}>
           {services.map((service, i) => (
@@ -56,13 +56,13 @@ export function ServicesSection() {
                 transition: 'all 0.3s ease'
               }}
             >
-              <div style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
+              <div style={{ height: 'clamp(200px, 30vh, 240px)', overflow: 'hidden', position: 'relative' }}>
                 <img src={service.image} alt={service.title} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, var(--color-charcoal), transparent)' }} />
               </div>
               
-              <div style={{ padding: '32px' }}>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', color: 'var(--color-platinum)', marginBottom: '16px' }}>
+              <div style={{ padding: 'clamp(20px, 4vw, 32px)' }}>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(18px, 3vw, 24px)', color: 'var(--color-platinum)', marginBottom: '16px' }}>
                   {service.title}
                 </h3>
                 <p style={{ fontFamily: 'var(--font-ui)', fontSize: '14px', color: 'var(--color-mist)', lineHeight: 1.6 }}>

@@ -30,7 +30,7 @@ export function Nav() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '24px 48px',
+        padding: 'clamp(16px, 3vh, 24px) var(--section-padding)',
         zIndex: 100,
         transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
         background: isGlass ? 'var(--color-glass)' : 'transparent',
@@ -42,7 +42,7 @@ export function Nav() {
       <div 
         style={{ 
           fontFamily: 'var(--font-display)', 
-          fontSize: '13px', 
+          fontSize: 'clamp(10px, 2vw, 13px)', 
           letterSpacing: '0.3em', 
           textTransform: 'uppercase',
           fontWeight: 600
@@ -51,7 +51,7 @@ export function Nav() {
       </div>
 
       {/* Center: Links (Desktop) */}
-      <div style={{ display: 'flex', gap: '32px' }} className="desktop-nav">
+      <div style={{ display: 'flex', gap: '32px' }} className="desktop-only">
         {['Home', 'Projects', 'Philosophy', 'Process', 'Contact'].map((item) => (
           <a 
             href={`#${item.toLowerCase()}`} 
@@ -71,16 +71,17 @@ export function Nav() {
         ))}
       </div>
 
-      {/* Right: CTA */}
-      <div>
+      {/* Right: CTA (Desktop) */}
+      <div className="desktop-only">
         <button 
+          onClick={() => window.open('https://wa.me/919536756646', '_blank')}
           style={{
-            padding: '12px 24px',
+            padding: '10px 20px',
             border: '1px solid var(--color-gold)',
             background: 'transparent',
             color: 'var(--color-platinum)',
             fontFamily: 'var(--font-ui)',
-            fontSize: '11px',
+            fontSize: '10px',
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
             cursor: 'pointer',
@@ -96,8 +97,13 @@ export function Nav() {
             e.currentTarget.style.color = 'var(--color-platinum)';
           }}
         >
-          Begin Your Project
+          Begin Project
         </button>
+      </div>
+
+      {/* Mobile Menu Icon (Placeholder simple icon for now) */}
+      <div className="mobile-only" style={{ color: 'var(--color-gold)', fontSize: '20px', cursor: 'pointer' }}>
+        ☰
       </div>
     </motion.nav>
   );

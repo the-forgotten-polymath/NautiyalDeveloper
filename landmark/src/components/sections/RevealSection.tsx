@@ -65,10 +65,10 @@ export function RevealSection({ targetRef }: { targetRef?: React.RefObject<HTMLD
           Engineering Landmarks. Delivering Legacies.
         </motion.div>
         
-        <motion.div variants={fadeUpVariant} style={{ display: 'flex', justifyContent: 'center', gap: '16px', marginTop: '48px' }}>
+        <motion.div variants={fadeUpVariant} style={{ display: 'flex', justifyContent: 'center', gap: '16px', marginTop: '48px', flexWrap: 'wrap' }}>
           <button 
             onClick={() => window.open('https://wa.me/919536756646', '_blank')}
-            style={{ background: 'var(--color-gold)', color: 'var(--color-void)', border: 'none', height: '56px', padding: '0 40px', fontFamily: 'var(--font-ui)', textTransform: 'uppercase', letterSpacing: '0.15em', fontSize: '12px', borderRadius: '100px', cursor: 'pointer' }}
+            style={{ background: 'var(--color-gold)', color: 'var(--color-void)', border: 'none', minHeight: '56px', padding: '0 40px', fontFamily: 'var(--font-ui)', textTransform: 'uppercase', letterSpacing: '0.15em', fontSize: '12px', borderRadius: '100px', cursor: 'pointer' }}
           >
             Start Your Project →
           </button>

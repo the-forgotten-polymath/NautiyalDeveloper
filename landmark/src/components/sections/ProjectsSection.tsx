@@ -3,14 +3,14 @@ import { PROJECTS } from '../../constants/projects';
 
 export function ProjectsSection() {
   return (
-    <div id="projects" style={{ position: 'relative', background: 'var(--color-void)', zIndex: 10, padding: '120px 10vw', pointerEvents: 'auto' }}>
-      <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '48px', fontWeight: 300, color: 'var(--color-platinum)', marginBottom: '64px', textAlign: 'center' }}>
+    <div id="projects" style={{ position: 'relative', background: 'var(--color-void)', zIndex: 10, padding: 'var(--section-padding-vertical) var(--section-padding)', pointerEvents: 'auto' }}>
+      <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: 300, color: 'var(--color-platinum)', marginBottom: '64px', textAlign: 'center' }}>
         Selected Works
       </h2>
       
       <div style={{ 
         display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', 
         gap: '32px',
         alignItems: 'start'
       }}>
@@ -30,7 +30,7 @@ export function ProjectsSection() {
                  whileInView={{ opacity: 1, y: 0 }}
                  transition={{ duration: 0.8, delay: (i % 3) * 0.1 }}
               >
-                <div style={{ position: 'relative', overflow: 'hidden', height: isTall ? '460px' : '320px', borderRadius: '2px' }}>
+                <div style={{ position: 'relative', overflow: 'hidden', height: isTall ? 'clamp(320px, 40vh, 460px)' : '320px', borderRadius: '2px' }}>
                   <motion.img 
                     src={project.image}
                     alt={project.title} 
@@ -62,7 +62,7 @@ export function ProjectsSection() {
                 </div>
                 
                 <div style={{ marginTop: '24px' }}>
-                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 300, color: 'var(--color-platinum)' }}>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(20px, 3vw, 24px)', fontWeight: 300, color: 'var(--color-platinum)' }}>
                     {project.title}
                   </h3>
                   <div style={{ display: 'flex', gap: '16px', fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--color-mist)', marginTop: '8px' }}>

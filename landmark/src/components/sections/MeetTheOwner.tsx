@@ -3,8 +3,8 @@ import { fadeUpVariant, staggerContainer } from '../../constants/animation';
 
 export function MeetTheOwner() {
   return (
-    <div id="philosophy" style={{ position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center', backgroundColor: 'var(--color-void)', pointerEvents: 'auto', padding: '120px 10vw' }}>
-      <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '80px', alignItems: 'center' }}>
+    <div id="philosophy" style={{ position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center', backgroundColor: 'var(--color-void)', pointerEvents: 'auto', padding: 'var(--section-padding-vertical) var(--section-padding)' }}>
+      <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: 'clamp(40px, 8vw, 80px)', alignItems: 'center' }}>
         
         {/* Founder Image Column */}
         <motion.div variants={fadeUpVariant} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} style={{ position: 'relative' }}>

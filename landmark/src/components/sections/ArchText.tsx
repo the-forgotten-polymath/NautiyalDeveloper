@@ -3,7 +3,7 @@ import { fadeUpVariant, staggerContainer } from '../../constants/animation';
 
 export function ArchText() {
   return (
-    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 10vw', pointerEvents: 'auto' }}>
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 var(--section-padding)', pointerEvents: 'auto' }}>
       <motion.div variants={staggerContainer(0.15)} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.5 }}>
         <motion.div variants={fadeUpVariant} style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--color-gold)', letterSpacing: '0.15em', marginBottom: '24px' }}>
           PHASE · 03 · ARCHITECTURE
